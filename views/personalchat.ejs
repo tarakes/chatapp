@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>personal Chat</title>
+    <link href="/personalchat.css" type="text/css" rel="stylesheet">
+    <script>
+        const someid = "<%= peerid %>"
+        const portno = "<%= portn %>"
+      </script>
+    <script src="/jquery-3.6.0.min.js" type="text/javascript"></script>
+    <script src="/socket.io.js"></script>
+    <script src="/notify.min.js" type="text/javascript"></script>
+   
+</head>
+<body>
+    <img id="add_new_user" src="/adduserlogo.svg" title="adduser"></img><input type="text" id="new_contact" placeholder="type username to add">
+    <a href="/chat" id="an">Goto chatroom</a>
+    <img src="/videocalllogo.png" id="vc" title="Make a Video call" />
+    <img src="/logoutlogo.png" id="logoutbutton" title="Logout" />
+  <img src="/leavecalllogo.png" title="Leave call" id="leavebutton">
+    <div class="box">
+        <video id="me" class="vcBefore"  autoplay muted></video>
+        <video id="you" class="vcBefore"  autoplay></video>
+      <ul class="contact">
+       
+      </ul>
+      <ul class="chat">
+        
+      </ul>
+     
+    </div>
+    <input type="text" id="textbox" placeholder="Type here">   <img id="sendbutton" src="https://cdn-icons-png.flaticon.com/512/60/60525.png" title="Send"></img> 
+ <form enctype="multipart/form-data" id="myform"> 
+      <input type="file" name="dp"  id="actual-btn" multiple/>
+     </form> 
+     <img  id="submitbt" src="/sendbutton.png" title="SendFile">
+   
+
+ <script src="/peerjs.min.js"></script> 
+
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script type="text/javascript" src="/personalchat.js"></script>
+
+</body>
+</html>

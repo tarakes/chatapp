@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inbox</title>
+    <link href="/inbox.css" type="text/css" rel="stylesheet">
+    <script src="/jquery-3.6.0.min.js" type="text/javascript"></script>
+    <script src="/socket.io.js"></script>
+</head>
+<a href="/personalchat" id="goback">Back</a>
+<button id="roombutton">Join room</button><input type="text" id="roomcode" placeholder="enter room code" required><input id="name" type="text" placeholder="enter your name" required>
+<div class="room">
+
+<table  width="100%" id="mt">
+    <tr><td><br><br></td></tr>
+    <tr><td><br><br></td></tr>
+    <tr><td><br><br></td></tr>
+    <tr><td><br><br></td></tr>
+    <tr><td><br><br></td></tr>
+    <tr><td><br><br></td></tr>
+    <tr><td><br><br></td></tr>
+</table>
+</div>
+<tr><td><input type="text" id="textbox"><button id="sendbutton" disabled>Send</button></td></tr>
+    <script type="text/javascript">
+const socket = io("/");//"http://localhost:3000"
+socket.on('connect', function() {
+//  console.log(`connected with ${socket.id}`);
+  document.getElementById("sendbutton").addEventListener("click",()=>{
+        
+        var obj = document.getElementById("textbox").value;
+        if(obj != ""){//  &&  document.getElementById("name").value!=""
+            var table = document.getElementById("mt");
+            var cell = table.insertRow(0);
+            cell.innerHTML = `<td>${document.getElementById("textbox").value}</td>`;
+            cell.setAttribute("align","right");
+            document.getElementById("textbox").value="";
+        socket.emit("sendmessg",obj,document.getElementById("roomcode").value,document.getElementById("name").value);
+        }
+    })
+  //  socket.emit("messg","Hello World from client");
+  document.getElementById("roombutton").addEventListener("click",()=>{
+      event.preventDefault();
+      document.getElementById("sendbutton").removeAttribute("disabled");
+      //document.getElementById("roomcode")
+   //  $("#sendbutton").removeAttr("disabled");
+      var roomcode = document.getElementById("roomcode").value;
+      if(roomcode != ""){
+      var table = document.getElementById("mt");
+            var cell = table.insertRow(0);
+            cell.innerHTML = `<td>you joined room ${roomcode}</td>`;
+            cell.setAttribute("align","center");
+   socket.emit("join",document.cookie,roomcode);
+      }
+  })
+
+    socket.on("newmessg",(data)=>{
+        console.log(data);
+        var table = document.getElementById("mt");
+            var cell = table.insertRow(0);
+            cell.innerHTML = `<td>${data}</td>`;
+         cell.setAttribute("align","left");
+       })
+});
+
+
+    </script>
+</body>
+</html>

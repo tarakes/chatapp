@@ -1,0 +1,356 @@
+
+
+@media screen and (min-width: 900px) {
+    body{
+        background:linear-gradient(178deg, white, #90d9ef);
+        background-size: 100% 100vh;
+    }
+    #logoutbutton{
+        width: 3%;
+        float: right;
+    }
+    #logoutbutton:hover{
+    cursor: pointer;
+    }
+    #actual-btn{
+      float: right;
+      float: right;  
+    }
+    label{
+        float: right;  
+    }
+    #actual-btn:hover{
+        cursor: pointer;
+    }
+    #submitbt{
+        float: right;
+       width: 3%;
+       height: 3%;
+    }
+    #submitbt:hover{
+        cursor: pointer;
+    }
+    label img{
+        width: 23%;
+        height: 3%;
+        float: right;
+    }
+    label img:hover{
+        cursor: pointer;
+    }
+    .box{
+       
+       
+     margin-left: 5%;
+        width: 85vw;
+        height: 500px;
+        display: flex;
+        flex-direction: row;
+        border-radius: 10px;
+        color: lightgray;
+        border: 1px solid black;
+    }
+    
+    .chat{
+        overflow: scroll;
+      
+    }
+    .contact{
+        overflow: scroll;
+    }
+    .contact li{
+        color: #000000;
+        font-weight: 10px;
+        border-radius: 7%;
+       background:linear-gradient(172deg, #00ff82, #26f0f0);
+       box-shadow: 4px 3px 11px 5px #0db5b0;
+     border-bottom: 2px solid #145e38;
+      font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+    }
+    .contact li:hover{
+        cursor: pointer;
+        background: linear-gradient(347deg, #ff0000, #7794ff);
+    }
+    #rec{
+        background: linear-gradient(347deg, #ff0000, #7794ff);
+                box-shadow: -3px 1px 10px 5px #d70058;
+    }
+    #head{
+        font-weight: bold;
+        font-size: 19px;
+       
+        background-color: tomato;
+        float: left;
+    }
+    li{
+        list-style: none;
+    }
+    .contact{
+        width: 30%;
+        border-right: 1px solid black;
+    }
+    .chat{
+        width: 70%;
+    }
+    #an{
+        color: purple;
+        font-weight: bolder;
+    }
+    .chat>li{
+     
+        height: 5%;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+       font-weight: bolder;
+    }
+    #textbox{
+        float: right;
+        width: 40%;
+        background-color: initial;
+        border: 2px solid rgb(0, 0, 0);
+        color: black;
+        font-weight: bolder;
+    }
+    #sendbutton{
+        float: right;
+        height: 20px;
+        border-radius: 5px;
+        background-color: initial;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+    #sendbutton:hover{
+        cursor: pointer;
+    }
+    button:hover{
+    cursor: pointer;
+    }
+    #add_new_user{
+        border-radius: 5px;
+    background-color: initial;
+    }
+    #new_contact{
+        background-color: initial;
+        color: red;
+        border-radius: 5px;
+    }
+    #add_new_user{
+        width: 3%;
+        height: 3%;
+    }
+    #add_new_user:hover{
+        cursor: pointer;
+    }
+    .myself_sender{
+        background: linear-gradient(165deg, #201b00, #dbbe3400);
+                color: #000000;
+    }
+    .other_sender{
+        background: linear-gradient(190deg, #3a3a3af0, #26f0f0);
+                color: rgb(0 0 0);
+    }
+    #vc{
+        width: 44px;
+        height: 37px;
+        display: inline-block;
+    }
+    #vc:hover{
+        cursor:pointer;
+    }
+    #leavebutton{
+        width: 44px;
+        height: 37px;
+        display: none;
+       
+    }
+    #leavebutton:hover{
+        cursor: pointer;
+    }
+    .vcBefore{
+       width: 0%;
+       height: 0%;
+    }
+    .vcAfter{
+        width: 50%;
+        height: 100%; 
+        z-index: 5;  
+        border-radius: 10px;
+    }    
+}
+
+@media screen and (max-width: 900px) {
+    body{
+        background:linear-gradient(245deg, white, #90d9ef);
+        background-size: 100% 100vh;
+    }
+    #actual-btn{
+        margin-top: 3%;
+        width: 28%;  
+    }
+  
+    #actual-btn:hover{
+        cursor: pointer;
+    }
+    #submitbt{
+        width: 11%;
+    height: 3%;
+    margin-left: 29%;
+    margin-top: -6%;
+    }
+    #submitbt:hover{
+        cursor: pointer;
+    }
+    
+    .box{
+       
+       
+        overflow: scroll;
+        width: 100%;
+        height: 500px;
+       display: flex;
+        flex-direction: column; 
+        border-radius: 10px;
+        color: lightgray;
+        border: 1px solid black;
+       
+    }
+    #logoutbutton{
+        width: 9%;
+        float: right;
+    }
+    #logoutbutton:hover{
+    cursor: pointer;
+    }
+    .chat{
+        overflow: scroll;
+      
+    }
+    .contact{
+        overflow: scroll;
+        padding-left: 0;
+
+    }
+    .contact li{
+        color: #000000;
+     text-align: center;
+        font-weight: 10px;
+        border-radius: 7%;
+      width: 100%;
+      padding-right: 5%;
+       background:linear-gradient(172deg, #00ff82, #26f0f0);
+       box-shadow: 4px 3px 11px 5px #0db5b0;
+     border-bottom: 2px solid #145e38;
+      font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+    }
+    .contact li:hover{
+        cursor: pointer;
+        background: linear-gradient(347deg, #ff0000, #7794ff);
+    }
+    #rec{
+        background: linear-gradient(347deg, #ff0000, #7794ff);
+                box-shadow: -3px 1px 10px 5px #d70058;
+    }
+    #head{
+        font-weight: bold;
+        font-size: 19px;
+       
+        background-color: tomato;
+        float: left;
+    }
+    li{
+        list-style: none;
+    }
+    .contact{
+        width: 100%;
+        border-right: 1px solid black;
+      overflow: scroll;
+    }
+    .chat{
+        width: 100%;
+        padding-left: 0;
+        height: 100%;
+    }
+    #an{
+        color: purple;
+        font-weight: bolder;
+    }
+    .chat>li{
+     
+        height: 5%;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+       font-weight: bolder;
+       width: 100%;
+      
+    }
+    #textbox{
+        float: right;
+        width: 40%;
+        background-color: initial;
+        border: 2px solid rgb(0, 0, 0);
+        color: black;
+        font-weight: bolder;
+    }
+    #sendbutton{
+        float: right;
+        height: 20px;
+        border-radius: 5px;
+        background-color: initial;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+    #sendbutton:hover{
+        cursor: pointer;
+    }
+    button:hover{
+    cursor: pointer;
+    }
+    #add_new_user{
+        border-radius: 5px;
+    background-color: initial;
+    }
+    #new_contact{
+        background-color: initial;
+        color: red;
+        border-radius: 5px;
+    }
+    #add_new_user{
+        width: 15%;
+        height: 3%;
+    }
+    #add_new_user:hover{
+        cursor: pointer;
+    }
+    .myself_sender{
+        background: linear-gradient(165deg, #201b00, #dbbe3400);
+                color: #000000;
+    }
+    .other_sender{
+        background: linear-gradient(190deg, #3a3a3af0, #26f0f0);
+                color: rgb(0 0 0);
+    }
+    #vc{
+        width: 44px;
+        height: 37px;
+      
+        float: left;
+    }
+    #vc:hover{
+        cursor:pointer;
+    }
+    #leavebutton{
+        width: 44px;
+        height: 37px;
+       display: none;
+       float: right;
+    }
+    #leavebutton:hover{
+        cursor: pointer;
+    }
+    .vcBefore{
+       width: 0%;
+       height: 0%;
+    }
+    .vcAfter{
+        width: 100%;
+        height: 100%; 
+        z-index: 5;  
+        border-radius: 10px;
+    }    
+}

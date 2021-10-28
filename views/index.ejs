@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="/indexcss.css" type="text/css" rel="stylesheet">
+    <script src="/jquery-3.6.0.min.js" type="text/javascript"></script>
+    <script src="/notify.min.js" type="text/javascript"></script>
+</head>
+<body>
+  <div id="login_infor">
+      <div>LOGIN</div>
+   <div> username<input type="text" id="username" placeholder="registered username" class="box"></div>
+   <div>password<input type="password" id="password" class="box"></div>
+   <button id="loginbutton" onclick="sendcredintials()">Login</button>
+   <button id="signup_redirect">SignUp Here</button>
+  </div>
+  
+  <script type="text/javascript">
+ 
+function sendcredintials(){
+  event.preventDefault();
+  var obj = {
+username: document.getElementById("username").value,
+password: document.getElementById("password").value
+  };
+  fetch('/login/',{
+    method:'POST',
+    credentials:'include',
+    body:JSON.stringify(obj),
+    headers:{
+      'content-type':'application/json',
+    }
+  })
+  .then((res)=>{
+    return res.json();
+  })
+  .then((data)=>{
+    if(data.err)
+   $.notify('Invalid username or password!');
+   else{
+   $.notify('logged in successfully','success');
+   setTimeout(()=>{
+    window.open("/personalchat","_self");
+   },2000)
+   }
+  })
+  .catch((err)=>{
+    console.log(err);
+  })
+  
+};
+  document.getElementById("signup_redirect").addEventListener("click",()=>{
+  
+   window.open("/rdsignup","_self");
+  });
+
+  </script>
+</body>
+</html>
